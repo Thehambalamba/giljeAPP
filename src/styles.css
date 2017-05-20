@@ -3,9 +3,10 @@
     src: url(/assets/font/UniNeue-Light.otf);
 }
 
-h1,
-h2,
-h3,
-h4 {
+*:not(i) {
     font-family: UniNeue;
+}
+
+a {
+    text-decoration: none;
 }

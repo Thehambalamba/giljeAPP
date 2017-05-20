@@ -1,0 +1,37 @@
+<md-card class="cardRegister">
+    <h1>Popunite sledeće podatke:</h1>
+    <form class="formWrap">
+        <md-list>
+            <md-list-item>
+                <md-input-container >
+                    <input mdInput placeholder="Vaše ime:" required>
+                </md-input-container>
+                <md-input-container class="inputDouble">
+                    <input mdInput placeholder="Vaše prezime:" required>
+                </md-input-container>
+            </md-list-item>
+            <md-list-item>
+                <md-input-container>
+                    <input mdInput placeholder="Vaše korisničko ime:" required>
+                </md-input-container>
+                <md-input-container class="inputDouble">
+                    <input mdInput placeholder="Vaša šifra:" required>
+                </md-input-container>
+            </md-list-item>
+            <md-list-item>
+                <md-input-container class="inputLarge">
+                    <input mdInput placeholder="Vaš email:" required>
+                </md-input-container>
+            </md-list-item>
+            <md-list-item>
+                <md-input-container class="inputLarge">
+                    <input mdInput placeholder="Vaš broj telefona:" required>
+                </md-input-container>
+            </md-list-item>
+        </md-list>
+    </form>
+    <md-card-actions>
+        <button md-button>Prijavite se</button>
+        <h3>Imate nalog?<a routerLink="/login"> Ulogujte se.</a></h3>
+    </md-card-actions>
+</md-card>
