@@ -17,7 +17,13 @@
 	right: 10%;
 	top: 50px;
 }
+.navLeft {
+	position: absolute;
+	left: 25%;
+	top: 50px;
+}
 
-.navRightList> a {
+.navList> a {
 	padding: 20px;
 }
+
