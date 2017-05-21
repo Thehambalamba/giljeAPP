@@ -15,11 +15,13 @@ import { ProductsComponent } from './components/products/products.component';
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service'
 import { FlashMessagesModule } from 'angular2-flash-messages';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const appRoutes: Routes = [
   {path:'', component: ProductsComponent},
   {path:'login', component: LoginComponent},
   {path:'register', component: RegisterComponent},
+  {path:'profile', component: ProfileComponent}
 ]
 
 @NgModule({
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
     RegisterComponent,
     LoginComponent,
     ProductsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
