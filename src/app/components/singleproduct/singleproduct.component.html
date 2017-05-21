@@ -1,4 +1,4 @@
-<md-card *ngFor="let product of products">
+<md-card>
   <md-card-header>
     <md-card-title>{{ product.name }}</md-card-title>
     <md-card-subtitle>{{ product.brand }}</md-card-subtitle>
@@ -8,9 +8,21 @@
     <p>
       {{ product.description }}
     </p>
+    <p>
+      {{ product.category }}
+    </p>
+    <p>
+      {{ product.size }}
+    </p>
+    <p>
+      {{ product.gender }}
+    </p>
+    <p>
+      {{ product.price }} RSD
+    </p>
+    <p>
+      {{ product.user }}
+    </p>
   </md-card-content>
-  <md-card-actions>
-    <button md-button [routerLink]="['/singleproduct', product._id]">Više</button>
-  </md-card-actions>
 </md-card>
 
