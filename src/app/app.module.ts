@@ -12,6 +12,10 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductsComponent } from './components/products/products.component';
 
+import { ValidateService } from './services/validate.service';
+import { AuthService } from './services/auth.service'
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
 const appRoutes: Routes = [
   {path:'', component: ProductsComponent},
   {path:'login', component: LoginComponent},
@@ -31,6 +35,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
+    FlashMessagesModule,
     BrowserAnimationsModule,
     MdButtonModule,
     MdMenuModule,
@@ -38,9 +43,9 @@ const appRoutes: Routes = [
     MdToolbarModule,
     MdIconModule,
     MdListModule,
-    MdInputModule
+    MdInputModule,
   ],
-  providers: [],
+  providers: [ValidateService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
