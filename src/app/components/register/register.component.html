@@ -1,37 +1,37 @@
 <md-card class="cardRegister">
     <h1>Popunite sledeće podatke:</h1>
-    <form class="formWrap">
+    <form (submit)="onRegisterSubmit()" class="formWrap">
         <md-list>
             <md-list-item>
-                <md-input-container >
-                    <input mdInput placeholder="Vaše ime:" required>
+                <md-input-container>
+                    <input [(ngModel)]="firstName" name="firstName" mdInput placeholder="Vaše ime:" required>
                 </md-input-container>
                 <md-input-container class="inputDouble">
-                    <input mdInput placeholder="Vaše prezime:" required>
+                    <input [(ngModel)]="lastName" name="lastName" mdInput placeholder="Vaše prezime:" required>
                 </md-input-container>
             </md-list-item>
             <md-list-item>
                 <md-input-container>
-                    <input mdInput placeholder="Vaše korisničko ime:" required>
+                    <input [(ngModel)]="userName" name="userName" mdInput placeholder="Vaše korisničko ime:" required>
                 </md-input-container>
                 <md-input-container class="inputDouble">
-                    <input mdInput placeholder="Vaša šifra:" required>
+                    <input [(ngModel)]="password" name="password" mdInput placeholder="Vaša šifra:" required type="password">
                 </md-input-container>
             </md-list-item>
             <md-list-item>
                 <md-input-container class="inputLarge">
-                    <input mdInput placeholder="Vaš email:" required>
+                    <input [(ngModel)]="email" name="email" mdInput placeholder="Vaš email:" required>
                 </md-input-container>
             </md-list-item>
             <md-list-item>
                 <md-input-container class="inputLarge">
-                    <input mdInput placeholder="Vaš broj telefona:" required>
+                    <input [(ngModel)]="phoneNumber" name="phoneNumber" mdInput placeholder="Vaš broj telefona:" required>
                 </md-input-container>
             </md-list-item>
         </md-list>
+        <md-card-actions>
+            <button md-button>Prijavite se</button>
+            <h3>Imate nalog?<a routerLink="/login"> Ulogujte se.</a></h3>
+        </md-card-actions>
     </form>
-    <md-card-actions>
-        <button md-button>Prijavite se</button>
-        <h3>Imate nalog?<a routerLink="/login"> Ulogujte se.</a></h3>
-    </md-card-actions>
 </md-card>
