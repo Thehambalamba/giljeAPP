@@ -1,3 +1,28 @@
-<p>
-  singleproduct works!
-</p>
+<md-card>
+  <md-card-header>
+    <md-card-title>{{ product.name }}</md-card-title>
+    <md-card-subtitle>{{ product.brand }}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="assets/img/examples/shiba2.jpg">
+  <md-card-content>
+    <p>
+      {{ product.description }}
+    </p>
+    <p>
+      {{ product.category }}
+    </p>
+    <p>
+      {{ product.size }}
+    </p>
+    <p>
+      {{ product.gender }}
+    </p>
+    <p>
+      {{ product.price }} RSD
+    </p>
+    <p>
+      {{ product.user }}
+    </p>
+  </md-card-content>
+</md-card>
+

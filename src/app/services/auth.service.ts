@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AuthService {
   authToken: any;
   user: any;
- 
+  private baseUrl: string = 'http://localhost:8080/api/products';
   constructor(private http: Http) { }
 
   registerUser(user) {
@@ -32,15 +33,18 @@ export class AuthService {
      .map(res => res.json());
 
   }
-  getProductsById() {
-    let headers = new Headers();
-    this.loadToken();
-    headers.append('Authorization', this.authToken);
-    headers.append('Content-Type','application/json');
-    return this.http.get('http://localhost:8080/api/products/${productId}', {headers: headers})
-     .map(res => res.json());
+  getProductsById(productId) {
+      let headers = new Headers();
+      this.loadToken();
+      headers.append('Authorization', this.authToken);
+      headers.append('Content-Type','application/json');
+    	return this.http.get(`${this.baseUrl}/${productId}`, {headers: headers})
 
-  }
+     	 	.toPromise()
+     		.then(res => {
+      			return res.json();
+      		});
+ 	 }
 
   storeUserData(token, user) {
   	localStorage.setItem('id_token', token);
