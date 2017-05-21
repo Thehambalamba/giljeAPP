@@ -1,21 +1,21 @@
 <md-card class="cardLogin">
     <h1>Molimo vas unesite vaše podatke:</h1>
-    <form class="formWrap">
+    <form (submit)="onLoginSubmit()" class="formWrap">
         <md-list>
             <md-list-item>
                 <md-input-container>
-                    <input mdInput placeholder="Korisničko ime:">
+                    <input [(ngModel)]="userName" name="userName" mdInput placeholder="Korisničko ime:">
                 </md-input-container>
             </md-list-item>
             <md-list-item>
                 <md-input-container>
-                    <input mdInput placeholder="Šifra:">
+                    <input [(ngModel)]="password" name="password" mdInput placeholder="Šifra:" type="password">
                 </md-input-container>
             </md-list-item>
         </md-list>
+        <md-card-actions>
+            <button md-button>Uloguj se</button>
+            <h3>Nemate nalog? <a routerLink="/register">Prijavite se.</a></h3>
+        </md-card-actions>
     </form>
-    <md-card-actions>
-        <button md-button>Uloguj se</button>
-        <h3>Nemate nalog? <a routerLink="/register">Prijavite se.</a></h3>
-    </md-card-actions>
 </md-card>
