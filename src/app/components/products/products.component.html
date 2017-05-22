@@ -3,7 +3,6 @@
     <md-card-title>{{ product.name }}</md-card-title>
     <md-card-subtitle>{{ product.brand }}</md-card-subtitle>
   </md-card-header>
-  <img md-card-image src="assets/img/examples/shiba2.jpg">
   <md-card-content>
     <p>
       {{ product.description }}
@@ -14,5 +13,5 @@
   </md-card-actions>
 </md-card>
 <div class="buttonAdd">
-<span mdTooltip="Dodaj proizvod."><button md-fab color="primary" routerLink="/addproduct"><md-icon>add</md-icon></button></span>
+<span *ngIf="authService.loggedIn()" mdTooltip="Dodaj proizvod."><button md-fab color="primary" routerLink="/addproduct"><md-icon>add</md-icon></button></span>
 </div>

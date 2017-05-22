@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { tokenNotExpired } from 'angular2-jwt';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
@@ -60,6 +61,11 @@ export class AuthService {
   	this.authToken = token;
   	this.user = user;
   }
+  
+  loggedIn() {
+  return tokenNotExpired('id_token');
+  }
+
   loadToken(){
     const token = localStorage.getItem('id_token');
     this.authToken = token;

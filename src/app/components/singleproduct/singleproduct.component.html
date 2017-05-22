@@ -3,26 +3,12 @@
     <md-card-title>{{ product.name }}</md-card-title>
     <md-card-subtitle>{{ product.brand }}</md-card-subtitle>
   </md-card-header>
-  <img md-card-image src="assets/img/examples/shiba2.jpg">
   <md-card-content>
-    <p>
-      {{ product.description }}
-    </p>
-    <p>
-      {{ product.category }}
-    </p>
-    <p>
-      {{ product.size }}
-    </p>
-    <p>
-      {{ product.gender }}
-    </p>
-    <p>
-      {{ product.price }} RSD
-    </p>
-    <p>
-      {{ product.user }}
-    </p>
+    <md-list>
+      <md-list-item>{{ product.description }}</md-list-item>
+      <md-list-item>Veličina: {{ product.size }}</md-list-item>
+      <md-list-item>Cena: {{ product.price }} RSD</md-list-item>
+    </md-list>
   </md-card-content>
 </md-card>
 
