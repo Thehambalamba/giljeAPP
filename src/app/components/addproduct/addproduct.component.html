@@ -1,0 +1,33 @@
+<md-card class="cardRegister">
+  <h1>Popunite sledeće podatke:</h1>
+  <form (submit)="onCreateSubmit()" class="formWrap">
+    <!--<md-list>-->
+      <md-list-item>
+        <md-input-container>
+          <input [(ngModel)]="name" name="name" mdInput placeholder="Ime vašeg proizvoda:" required>
+        </md-input-container>
+        <md-input-container class="inputDouble">
+          <input [(ngModel)]="size" name="size" mdInput placeholder="Veličina vašeg proizvoda:" required>
+        </md-input-container>
+      </md-list-item>
+      <md-list-item>
+        <md-input-container>
+          <textarea type="text" [(ngModel)]="description" name="description"mdInput placeholder="Opis vašeg proizvoda:" required></textarea>
+        </md-input-container>
+      </md-list-item>
+      <md-list-item>
+        <md-input-container class="inputDouble">
+          <input [(ngModel)]="price" name="price" mdInput placeholder="Cena vašeg proizvoda:" required type="password">
+        </md-input-container>
+      </md-list-item>
+      <md-list-item>
+        <md-input-container class="inputLarge">
+          <input [(ngModel)]="brand" name="brand" mdInput placeholder="Brend vašeg proizvoda:" required>
+        </md-input-container>
+      </md-list-item>
+    <!--</md-list>-->
+    <md-card-actions>
+      <button color="warn" md-button>Napravi proizvod.</button>
+    </md-card-actions>
+  </form>
+</md-card>
