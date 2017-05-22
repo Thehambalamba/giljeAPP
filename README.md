@@ -1,8 +1,8 @@
 # GiljeAPP
 
-Front end Angular aplikacija za diplomski rad. 
+Front end Angular aplikacija za završni rad. 
 
-Nikola Pervic
+Nikola Pervić
 
 Aplikacija zahteva [NodeJS](https://nodejs.org/en/)
 
