@@ -1,5 +1,15 @@
 # GiljeAPP
 
+Front end Angular aplikacija za diplomski rad. 
+
+Nikola Pervic
+
+Aplikacija zahteva [NodeJS](https://nodejs.org/en/)
+
+Instalacija AngularCLI `npm install -g angular-cli`.
+
+Aplikaciju preuzeti i pre svega instalirati npm pakete koristeći `npm install` u root direktorijumu. Nakon dobijanja node_modules direktorijuma tom komandom aplikaciju pokrenuti koristeći `ng serve` komandu isto iz root direktorijuma.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
 ## Development server

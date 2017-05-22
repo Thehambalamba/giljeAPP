@@ -1,18 +1,14 @@
 <md-toolbar color="primary" class="navToolbar">
-    <a routerLink="/">
-        <div class="logo"></div>
-    </a>
-    <div class="navLeft">
-        <md-nav-list class="navList">
-            <a *ngIf="authService.loggedIn()" routerLink="/">Proizvodi</a>
-            <!--<a routerLink="/profile">Profil</a>-->
-        </md-nav-list>
-    </div>
-    <div class="navRight">
-        <md-nav-list class="navList">
-            <a *ngIf="!authService.loggedIn()" routerLink="/login">Uloguj se</a>
-            <a *ngIf="authService.loggedIn()"(click)="onLogoutClick()" href="#">Izloguj se</a>
-            <a *ngIf="!authService.loggedIn()" routerLink="/register">Prijavi se</a>
-        </md-nav-list>
-    </div>
+  <a routerLink="/">
+    <div class="logo"></div>
+  </a>
+  <div class="navRight">
+    <md-nav-list class="navList">
+      <a *ngIf="authService.loggedIn()" routerLink="/">Proizvodi</a>
+      <a *ngIf="!authService.loggedIn()" routerLink="/login">Uloguj se</a>
+      <a *ngIf="authService.loggedIn()" (click)="onLogoutClick()" href="#">Izloguj se</a>
+      <a *ngIf="!authService.loggedIn()" routerLink="/register">Prijavi se</a>
+    </md-nav-list>
+  </div>
 </md-toolbar>
+

@@ -13,7 +13,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductsComponent } from './components/products/products.component';
-import { ProfileComponent } from './components/profile/profile.component';
 import { SingleproductComponent } from './components/singleproduct/singleproduct.component';
 import { AddproductComponent } from './components/addproduct/addproduct.component'
 
@@ -26,7 +25,6 @@ const appRoutes: Routes = [
   {path:'', component: ProductsComponent},
   {path:'login', component: LoginComponent},
   {path:'register', component: RegisterComponent},
-  {path:'profile', component: ProfileComponent},
   {path:'singleproduct/:id', component: SingleproductComponent},
   {path:'addproduct', component: AddproductComponent}
 ]
@@ -38,7 +36,6 @@ const appRoutes: Routes = [
     RegisterComponent,
     LoginComponent,
     ProductsComponent,
-    ProfileComponent,
     SingleproductComponent,
     AddproductComponent,
   ],
