@@ -16,6 +16,14 @@ export class AuthService {
   	return this.http.post('http://localhost:8080/api/users', user,{headers: headers})
   	 .map(res => res.json());
   }
+  createProduct(product) {
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+  	headers.append('Content-Type','application/json');
+  	return this.http.post('http://localhost:8080/api/products', product,{headers: headers})
+  	 .map(res => res.json());
+  }
 
   authenticateUser(user){
   	let headers = new Headers();
