@@ -10,7 +10,9 @@
     </p>
   </md-card-content>
   <md-card-actions>
-    <button md-button [routerLink]="['/singleproduct', product._id]">Više</button>
+    <button color="primary" md-button [routerLink]="['/singleproduct', product._id]">Više</button>
   </md-card-actions>
 </md-card>
-
+<div class="buttonAdd">
+<span mdTooltip="Dodaj proizvod."><button md-fab color="primary" routerLink="/addproduct"><md-icon>add</md-icon></button></span>
+</div>

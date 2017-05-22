@@ -1,0 +1,18 @@
+.cardRegister {
+
+	text-align: center;
+}
+
+.formWrap {
+
+	display: inline-block;
+}
+
+.inputLarge {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.inputDouble {
+	margin-left:  10px;
+}
