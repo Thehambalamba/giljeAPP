@@ -1,14 +1,18 @@
 <md-card>
-  <md-card-header>
+  <div class="center">
     <md-card-title>{{ product.name }}</md-card-title>
-    <md-card-subtitle>{{ product.brand }}</md-card-subtitle>
-  </md-card-header>
+    <md-card-subtitle>
+      <h3>{{ product.brand }}</h3>
+    </md-card-subtitle>
+  </div>
   <md-card-content>
-    <md-list>
-      <md-list-item>{{ product.description }}</md-list-item>
-      <md-list-item>Veličina: {{ product.size }}</md-list-item>
-      <md-list-item>Cena: {{ product.price }} RSD</md-list-item>
-    </md-list>
+    {{ product.description }}
   </md-card-content>
+  <div class="center">
+    <h4>Veličina: {{ product.size }}</h4>
+    <h4>Cena: {{ product.price }} RSD</h4>
+      
+  </div>
+
 </md-card>
 

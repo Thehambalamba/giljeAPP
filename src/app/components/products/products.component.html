@@ -1,17 +1,18 @@
 <md-card *ngFor="let product of products">
-  <md-card-header>
+  <div class="center">
     <md-card-title>{{ product.name }}</md-card-title>
-    <md-card-subtitle>{{ product.brand }}</md-card-subtitle>
-  </md-card-header>
+    <md-card-subtitle>
+      <h3>{{ product.brand }}</h3>
+    </md-card-subtitle>
+  </div>
   <md-card-content>
-    <p>
-      {{ product.description }}
-    </p>
+    {{ product.description }}
   </md-card-content>
-  <md-card-actions>
+  <md-card-actions class="center">
     <button color="primary" md-button [routerLink]="['/singleproduct', product._id]">Više</button>
   </md-card-actions>
 </md-card>
 <div class="buttonAdd">
-<span *ngIf="authService.loggedIn()" mdTooltip="Dodaj proizvod."><button md-fab color="primary" routerLink="/addproduct"><md-icon>add</md-icon></button></span>
+  <span *ngIf="authService.loggedIn()" mdTooltip="Dodaj proizvod."><button md-fab color="primary" routerLink="/addproduct"><md-icon>add</md-icon></button></span>
 </div>
+

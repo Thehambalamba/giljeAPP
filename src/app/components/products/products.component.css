@@ -1,5 +1,8 @@
 .buttonAdd {
-	position: absolute;
+	position: fixed;
 	right: 370px;
 	bottom: 200px;
+}
+.center {
+	text-align: center;
 }
