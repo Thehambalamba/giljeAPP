@@ -6,7 +6,7 @@ Nikola Pervić
 
 Aplikacija zahteva [NodeJS](https://nodejs.org/en/)
 
-Instalacija AngularCLI `npm install -g angular-cli`.
+Instalacija AngularCLI `npm install -g angular-cli`. !!!Ukoliko imate angular-cli, instalirajte najnoviju verziju.!!!
 
 Aplikaciju preuzeti i pre svega instalirati npm pakete koristeći `npm install` u root direktorijumu. Nakon dobijanja node_modules direktorijuma tom komandom aplikaciju pokrenuti koristeći `ng serve` komandu isto iz root direktorijuma.
 
